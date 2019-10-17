@@ -1,28 +1,30 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.xingtu.groupstudy"
         minSdkVersion 17
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true   //开启混淆
+            zipAlignEnabled true  //压缩优化
+            shrinkResources true  //移出无用资源
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'//默认的混淆文件以及我们指定的混淆文件
         }
     }
-
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -35,7 +37,7 @@ dependencies {
     if (isNeedMessageModule.toBoolean()) {
         compile project(':module_message')
     }
-    if(isNeedStoreModule.toBoolean()){
+    if (isNeedStoreModule.toBoolean()) {
         compile project(':module_store')
     }
 }

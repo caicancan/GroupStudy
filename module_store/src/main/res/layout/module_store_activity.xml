@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.module_store.StoreActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中" />
+
+        <Button
+            android:id="@+id/btn_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空白" />
+
+        <Button
+            android:id="@+id/btn_net_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络错误" />
+
+        <Button
+            android:id="@+id/btn_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成功" />
+    </LinearLayout>
+
+    <com.xingtu.commonui.view.StatusView
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.xingtu.commonui.view.StatusView>
+</LinearLayout>
