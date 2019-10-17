@@ -43,4 +43,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     implementation 'com.squareup.okio:okio:1.7.0'
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation project(':commonlib')
+    implementation project(':commonui')
+    implementation project(':localslib')
 }

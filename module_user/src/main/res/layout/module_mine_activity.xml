@@ -16,5 +16,14 @@
         android:text="商店"
         android:layout_width="200dp"
         android:layout_height="100dp" />
+    <com.xingtu.commonui.view.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        />
+    <com.xingtu.commonui.view.MyTextView
+        android:background="@android:color/white"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        />
 
 </LinearLayout>
