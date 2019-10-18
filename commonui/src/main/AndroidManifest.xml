@@ -3,7 +3,7 @@
     package="com.xingtu.commonui">
 
     <application>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
